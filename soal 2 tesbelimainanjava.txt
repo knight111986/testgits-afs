@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class tesbelimainan {
+    public static void main(String[] args) {
+        //int[] harga2 = {1, 2, 3, 4}; //contoh 1
+        //int n = 7; // contoh 1
+        int[] harga2 = {1, 12, 5, 111, 200, 1000, 10}; //contoh 2
+        int n = 50; // contoh 2
+
+        Arrays.sort(harga2);
+
+        long jumlahharga = 0;
+        int maks_mainan = 0;
+        for (int i = 0; i < harga2.length; i++) {
+            jumlahharga += harga2[i];
+            if(jumlahharga <= n){
+                maks_mainan++;
+            }
+            else
+                break;
+
+        }
+        System.out.print(maks_mainan);
+    }
+}
